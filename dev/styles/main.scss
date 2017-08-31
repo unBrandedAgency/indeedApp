@@ -1,5 +1,6 @@
 @import 'setup';
 
+
 @font-face {
 	font-family: 'loveloblack', arial, sans-serif ;
 	src: url('lovelo_black-webfont.woff2') format('woff2'),
@@ -10,6 +11,7 @@
 body {
 	background-color: blue;
 }
+
 * {
 	transition: all 0.5s ease-in-out;
 }
@@ -18,39 +20,41 @@ body {
 	margin: 0 auto;
 }
 
+
 body {
 	background: skyblue;
 	font-family: 'Open Sans', sans-serif;
+
 }
 
-
-// p.jobDesc {
-
-// }
 
 .jobDesc {
 		display: none;
 }
-p.bigBox {
-	display: block;
-}
-
-// p.jobDesc {
-
-// }
-
-.jobDesc {
-	display: none;
-}
 
 p.bigBox {
 	display: block;
 }
 
+.wrapper {
+	max-width: 1150px;
+	margin: 0 auto;
+}
+
+.jobCard-container {
+	display: block;
+	max-width: calc(50% - 40px);
+	float: left;
+	margin: 20px;
+	// height: 400px;
+}
 
 .fixed-header {
 	position: fixed;
 	top:0; left:0;
-	width: 100%;	 
+	width: 100%;
 }
 
+.userSubmit-container {
+	display: inline-block;
+}
