@@ -134,7 +134,9 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 @font-face {
   font-family: 'loveloblack';
-  src: url("lovelo_black-webfont.woff2") format("woff2"), url("lovelo_black-webfont.woff") format("woff"); }
+  src: url("../../font/lovelo_black-webfont.woff2") format("woff2"), url("../../font/lovelo_black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 
 html {
   font-size: 10px; }
@@ -149,7 +151,7 @@ body {
   font-weight: 300; }
 
 .logo h1 {
-  font-family: 'loveloblack';
+  font-family: 'loveloblack', arial, sans-serif;
   text-align: center;
   text-transform: uppercase;
   font-size: 40px;
@@ -357,7 +359,8 @@ button.hidden1 {
     color: #247BA0;
     font-size: 20px;
     font-weight: 400px;
-    margin: 0; }
+    margin: 0;
+    font-family: 'loveloblack', arial, sans-serif; }
     @media (max-width: 880px) {
       .jobCard-container h3 {
         font-size: 16px; } }

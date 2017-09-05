@@ -2,15 +2,13 @@
 @import 'variables';
 @import 'mixins';
 
-
 @font-face {
-  font-family: 'loveloblack';
-  src: url('lovelo_black-webfont.woff2') format('woff2'),
-    url('lovelo_black-webfont.woff') format('woff');
-  // font-weight: normal;
-  // font-style: normal;
+ font-family: 'loveloblack';
+ src: url('../../font/lovelo_black-webfont.woff2') format('woff2'),
+   url('../../font/lovelo_black-webfont.woff') format('woff');
+ font-weight: normal;
+ font-style: normal;
 }
-
 
 html {
 	font-size: 10px;
@@ -28,7 +26,7 @@ body {
 }
 
 .logo h1 {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'loveloblack', arial, sans-serif;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 40px;
@@ -297,6 +295,7 @@ button.hidden1 {
 		font-size: 20px;
 		font-weight: 400px;
 		margin: 0;
+		font-family: 'loveloblack', arial, sans-serif;
 		@include breakpoint(tablet) {
 			font-size: 16px;
 		}
