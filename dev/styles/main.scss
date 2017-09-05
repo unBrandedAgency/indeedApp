@@ -4,11 +4,8 @@
 
 
 @font-face {
-	font-family: 'loveloblack', arial, sans-serif ;
-	src: url('lovelo_black-webfont.woff2') format('woff2'),
-		url('lovelo_black-webfont.woff') format('woff');
-	// font-weight: normal;
-	// font-style: normal;
+    font-family: 'loveloblack';
+    src: url("indeedApp/public/styles/Lovelo%20Black.otf") format("opentype");
 }
 
 html {
@@ -22,7 +19,7 @@ html {
 
 body {
 	background: $primaryGreen;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'loveloblack', sans-serif;
 	font-weight: 300;
 }
 
@@ -30,6 +27,7 @@ body {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 40px;
+	font-family: 'loveloblack', sans-serif;
 	color: #fff;
 	margin: 0;
 	padding: 40px 0px;
