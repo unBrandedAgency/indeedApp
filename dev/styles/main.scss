@@ -4,9 +4,18 @@
 
 
 @font-face {
+<<<<<<< HEAD
     font-family: 'loveloblack';
     src: url("indeedApp/public/styles/Lovelo%20Black.otf") format("opentype");
+=======
+  font-family: 'loveloblack';
+  src: url('lovelo_black-webfont.woff2') format('woff2'),
+    url('lovelo_black-webfont.woff') format('woff');
+  // font-weight: normal;
+  // font-style: normal;
+>>>>>>> f92cc740392618c40a0851657be7b91f4454f278
 }
+
 
 html {
 	font-size: 10px;
@@ -24,6 +33,7 @@ body {
 }
 
 .logo h1 {
+	font-family: 'loveloblack';
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 40px;
@@ -41,7 +51,7 @@ p {
 
 .formInputContainer {
 	max-width: 100%;
-	padding: 10px 0px;
+	padding: 20px 0px;
 	@include breakpoint(tablet) {
 		max-width: 100%;
 	}
@@ -56,11 +66,14 @@ input[type=text]::placeholder {
 	max-width: 600px;
 	margin: 0 auto;
 	@include breakpoint(tablet) {
-		max-width: 500px;
+		width: 100%;
 	}
 	@include breakpoint(phone) {
-		max-width: 300px;
+		width: 100%;
 	}
+}
+.firstLine {
+	padding: 20px 0px;
 }
 
 .formInputContainer p {
@@ -134,7 +147,7 @@ input.jobTitle, .jobType, #jobLocation, #jobLocation__nav {
 	appearance: none;
 	border-style: none;
 	border-radius: none;
-	border-bottom: 4px dotted #fff;
+	border-bottom: 2px dotted #fff;
 	font-size: 46px;
 	font-weight: 800;
 	text-transform: uppercase;
@@ -180,7 +193,9 @@ h4 {
 }
 
 h5 {
-	text-align: center;	
+	text-align: center;
+	color: #FFF;
+	font-size: 36px;
 }
 
 .appOutputs {
@@ -216,7 +231,7 @@ h5 {
 
 .userInputs__nav {
 	max-width: 100%;
-	// display: none;
+	display: none;
 	text-align: center;
 	background: $primaryGreen;
 	color: #FFF;
@@ -237,6 +252,7 @@ h5 {
 	}
 	@include breakpoint(phone) {
 		display: none;
+		visibility: hidden;
 	}
 }
 p.hidden {
@@ -267,6 +283,7 @@ button.hidden1 {
 // Card Styling
 .jobCard-container {
 	background-color: #fff;
+	border-radius: 3px;
 	padding: 15px 24px;
 	border-top: 10px solid #B8DDD5; 
 	box-shadow: 0px 2px 4px rgba(0,0,0,0.30);
@@ -306,23 +323,29 @@ button.hidden1 {
 		color: black;
 		font-size: 14px;
 		font-weight: 300;
-		margin: 0;
 	}
 
 	.jobDesc {
 		display: none;
-		height: calc(133px + 10px + 2px);
+		height: calc(133px + 10px + 2px - 11px);
 		line-height: 30px;
-		border-top: 2px solid $primaryGreen;
+		border-top: 1px solid $primaryGreen;
+		border-bottom: 1px solid $primaryGreen;
 		padding: 20px 0px;
 		color: black;
 		font-size: 16px;
-		margin: 0;
+		margin: 0px 0px 10px 0px;
 		@include breakpoint(tablet) {
 			font-size: 14px;
 			padding: 8px 0px;
 			line-height: 20px;
-			height: calc(133px + 1px);
+			height: calc(133px + 1px - 11px);
+		}
+		@include breakpoint(phone) {
+			font-size: 16px;
+			padding: 8px 0px;
+			line-height: 30px;
+			height: inherit;
 		}
 	}
 }
@@ -337,11 +360,7 @@ button.hidden1 {
 } 
 }
 
-// .cardsContainer div:nth-child(even) {
-// 	background-color: red;
-// }
-
-// .cardsContainer div:nth-child(odd) {
-// 	background-color: blue;
-// 	float: right;
-// }
+footer {
+	text-align: center;
+	height: 50vh;
+}

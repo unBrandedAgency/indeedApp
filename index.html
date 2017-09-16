@@ -19,13 +19,13 @@
 		</div>
 		<div class="user wrapper clearfix">
 			<form class="userInputs userInputs__hero clearfix" action="">
-			<p>I want to ...</p>
+			<p class="firstLine">I want to ...</p>
 			<div class="formInputContainer">
 				<p>work</p>
 				<select class="jobType">
-					<option value="" disabled selected>Job Type</option>
-					<option value="parttime">Part Time</option>
+					<!-- <option value="" disabled selected></option> -->
 					<option value="fulltime">Full Time</option>
+					<option value="parttime">Part Time</option>
 					<option value="contract">Contract</option>
 					<option value="internship">Internship</option>
 					<option value="temporary">Temporary</option>
@@ -33,11 +33,11 @@
 			</div>
 			<div class="formInputContainer">
 				<p>as a</p>
-				<input type="text" class="jobTitle" value="web developer" placeholder="any job">
+				<input type="text" class="jobTitle" placeholder="Dream Job">
 			</div>
 			<div class="formInputContainer">
 				<p>in</p> 
-				<input type="text" id="jobLocation" value="Toronto" placeholder="Toronto, On ">
+				<input type="text" id="jobLocation">
 			</div>
 			<div class="formInputContainer">
 				<button class="userSubmit" type="submit"> <i class="fa fa-search" aria-hidden="true"></i>Find Job Postings</button>
@@ -51,17 +51,16 @@
 				<p class="hidden">I want to</p>
 				<p>work</p>
 				<select class="jobType jobType__nav">
-					<option value="" disabled selected>Job Type</option>
-					<option value="parttime">Part Time</option>
 					<option value="fulltime">Full Time</option>
+					<option value="parttime">Part Time</option>
 					<option value="contract">Contract</option>
 					<option value="internship">Internship</option>
 					<option value="temporary">Temporary</option>
 				</select>
 				<p>as a</p>
-				<input type="text" class="jobTitle jobTitle__nav" value="web developer" placeholder="any job">
+				<input type="text" class="jobTitle jobTitle__nav" placeholder="Dream Job">
 				<p>in</p> 
-				<input type="text" id="jobLocation__nav" value="Toronto" placeholder="Toronto, On ">
+				<input type="text" id="jobLocation__nav" placeholder="Location">
 			<div class="formInputContainer">
 				<button class="userSubmit userSubmit__nav" type="submit">Find Job</button>
 				<button class="userSubmit userSubmit__nav hidden1" type="submit">Find</button>

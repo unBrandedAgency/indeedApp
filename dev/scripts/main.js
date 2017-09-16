@@ -61,6 +61,7 @@ indeedApp.events = function() {
 
 		// add stickiness + animation to nav header
 		$('.nav').addClass('sticky animated slideInDown');
+		$('.userInputs__nav').css('display', 'block');
 		
 		// Scroll to top of results
 		$('html,body').animate({
@@ -73,8 +74,29 @@ indeedApp.events = function() {
 		const expand = $(this).find('.jobDesc');
 		expand.slideToggle(500);
 	});
+
+
+
+$(window).scroll(function () {
+    var top_offset = $(window).scrollTop();
+    if (top_offset <= 600) {
+        $('.userInputs__nav').css('display', 'none');
+} else {
+	$('.userInputs__nav').css('display', 'block');
 }
 
+});
+
+};
+
+
+
+// $('.userInputs__nav').on()
+
+// $(window).on('scroll', function() {
+// 	if ($(this).scrollTop() < $(window).height() ) {
+// 	            $nav.removeClass
+// })
 // Ajax Call
 indeedApp.getJobs = function() {
 		$.ajax({
@@ -178,7 +200,7 @@ indeedApp.displayJobs = function(jobs, results) {
 
 	if (results === 0) {
 		let noResults = `<h5>Sorry, no results. Please try a different search.</h5>`
-		$('.cardsContainer').append(noResults);
+		$('.appOutputs').append(noResults);
 	}
 
 	jobs.forEach(function(job, i) {
@@ -187,12 +209,12 @@ indeedApp.displayJobs = function(jobs, results) {
 		let jobDesc = `<p class="jobDesc">${job.snippet}</p>`
 		let jobUrl = `<a href=${job.url} target="_blank">Full Job Posting</a>`;
 		let jobCard = `<div class="jobCard-container animated">${jobTitle}${jobComp}${jobDesc}${jobUrl}`;
-		console.log(jobCard);
+		// console.log(jobCard);
 	// Print Cards
 		if (i % 2 === 0) {
-			$('.containerRight').append(jobCard);
-		} else { 
 			$('.containerLeft').append(jobCard);
+		} else { 
+			$('.containerRight').append(jobCard);
 		}
 		});
 	};

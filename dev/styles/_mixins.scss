@@ -4,6 +4,8 @@
   font-size: $font-size;
 }
 
+
+
 @mixin bodyText ($font-size: 1.2rem) {
   font-family: $bodyFont;
   font-weight: $light;
@@ -13,11 +15,13 @@
 // PUt in media queries here
 
 @mixin breakpoint($breakpoint) {
+
   @if $breakpoint == "phone" {
     @media (max-width: 670px) {
       @content;
     }
   }
+
 
   @else if $breakpoint == "tablet" {
     @media (max-width: 880px) {
@@ -25,24 +29,4 @@
     }
   }
 
-  @else if $breakpoint == "desktop" {
-    @media (max-width: 1100px) {
-      @content;
-    }
-  }
 }
-
-  // @else if $breakpoint == "xlarge" {
-  //   @media (min-width: 1500px) {
-  //     @content;
-  //   }
-  // }
-
-
-//   @else {
-//     @media ($breakpoint) {
-//       @content;
-//     }
-//   }
-// }
-
