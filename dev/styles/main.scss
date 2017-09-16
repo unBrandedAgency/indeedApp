@@ -4,18 +4,13 @@
 
 
 @font-face {
-<<<<<<< HEAD
-    font-family: 'loveloblack';
-    src: url("indeedApp/public/styles/Lovelo%20Black.otf") format("opentype");
-=======
-  font-family: 'loveloblack';
-  src: url('lovelo_black-webfont.woff2') format('woff2'),
-    url('lovelo_black-webfont.woff') format('woff');
-  // font-weight: normal;
-  // font-style: normal;
->>>>>>> f92cc740392618c40a0851657be7b91f4454f278
-}
+font-family: 'loveloblack';
+src: url('../../font/lovelo_black-webfont.woff2') format('woff2'),
+			url('../../font/lovelo_black-webfont.woff') format('woff');
+font-weight: normal;
+font-style: normal;
 
+}
 
 html {
 	font-size: 10px;
@@ -184,6 +179,7 @@ h3 {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+
 }
 
 h4 {
@@ -303,6 +299,7 @@ button.hidden1 {
 		font-size: 20px;
 		font-weight: 400px;
 		margin: 0;
+		font-family: 'loveloblack';
 		@include breakpoint(tablet) {
 			font-size: 16px;
 		}
