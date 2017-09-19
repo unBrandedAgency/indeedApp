@@ -2,16 +2,6 @@
 @import 'variables';
 @import 'mixins';
 
-
-@font-face {
-font-family: 'loveloblack';
-src: url('../../font/lovelo_black-webfont.woff2') format('woff2'),
-			url('../../font/lovelo_black-webfont.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-
-}
-
 html {
 	font-size: 10px;
 }
@@ -23,22 +13,24 @@ html {
 
 body {
 	background: $primaryGreen;
-	font-family: 'loveloblack', sans-serif;
+	font-family: $copyFont;
 	font-weight: 300;
 }
 
 .logo h1 {
-	font-family: 'loveloblack';
+	font-family: $displayFont;
+	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 40px;
-	font-family: 'loveloblack', sans-serif;
+	font-size: 60px;
 	color: #fff;
+	text-shadow: 1px 2px 2px rgba(0,0,0,0.4);
 	margin: 0;
 	padding: 40px 0px;
 }
 .logo-color {
 	color: $accentYellow;
+	text-shadow: 1px 2px 2px rgba(0,0,0,0.4)
 }
 p {	
 	margin: 0;
@@ -54,7 +46,8 @@ p {
 
 input[type=text]::placeholder {
 	text-transform: uppercase;
-	color: $accentBlue;
+	color: $fontPrimary;
+	text-shadow: 1px 2px 2px rgba(0,0,0,0.4);
 }
 
 .userInputs {
@@ -68,12 +61,12 @@ input[type=text]::placeholder {
 	}
 }
 .firstLine {
-	padding: 20px 0px;
+	font-size: 24px;
 }
 
 .formInputContainer p {
 	display: inline-block;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $copyFont;
 	color: #fff;
 	font-size: 46px;
 	font-weight: 300;
@@ -87,7 +80,7 @@ input[type=text]::placeholder {
 
 .userInputs__hero {
 	display: block;
-	font-family: 'Open Sans', sans-serif;
+	font-family: $copyFont;
 	color: #fff;
 	font-size: 46px;
 	font-weight: 300;
@@ -98,26 +91,6 @@ input[type=text]::placeholder {
 		font-size: 20px;
 	}
 }
-
-// .userInputs__hero input {
-// 	width: 80%;
-// }
-// .userInputs__hero {}
-// 	& > * {
-// 		display: inline-block;
-// 	}
-// 	p.userInputs__hero {
-// 		width: 20%;
-// 	} 
-// 	input.userInputs__hero {
-// 		width: 80%;
-// 	}
-// 	p:first-of-type {
-// 		width: 100%;
-// 	}
-// }
-
-
 
 p.bigBox {
 	display: block;
@@ -146,7 +119,8 @@ input.jobTitle, .jobType, #jobLocation, #jobLocation__nav {
 	font-size: 46px;
 	font-weight: 800;
 	text-transform: uppercase;
-	color: $accentBlue;
+	color: $fontPrimary;
+	text-shadow: 1px 2px 2px rgba(0,0,0,0.4);
 	@include breakpoint(tablet) {
 		font-size: 36px;
 	}
@@ -156,6 +130,7 @@ input.jobTitle, .jobType, #jobLocation, #jobLocation__nav {
 }
 
 button.userSubmit {
+	box-shadow: 0px 2px 4px rgba(0,0,0,0.30);
 	@include breakpoint(phone) {
 		display: none;
 	}
@@ -281,16 +256,20 @@ button.hidden1 {
 	background-color: #fff;
 	border-radius: 3px;
 	padding: 15px 24px;
-	border-top: 10px solid #B8DDD5; 
+	border-top: 10px solid $primaryGreenLight; 
 	box-shadow: 0px 2px 4px rgba(0,0,0,0.30);
 	margin: 10px 0px;
 	display: block;
 	width: 100%;
 	float: left;
-	// margin: 20px;
-	// padding: 20px;
-	& > {
-		font-family:'Open Sans', sans-serif;
+	transition: all 0.5s ease-in-out;
+	&:hover {
+		transform:translateY(-2px);
+		box-shadow: 0px 4px 6px rgba(0,0,0,0.30);
+		// transition: all 0.5s ease-in-out;
+	}
+	i {
+		color: $lightGrey;
 	}
 
 	h3 {
@@ -299,7 +278,7 @@ button.hidden1 {
 		font-size: 20px;
 		font-weight: 400px;
 		margin: 0;
-		font-family: 'loveloblack';
+		font-family: $displayFont;
 		@include breakpoint(tablet) {
 			font-size: 16px;
 		}
@@ -321,6 +300,15 @@ button.hidden1 {
 		font-size: 14px;
 		font-weight: 300;
 	}
+
+.jobTitle__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	i {
+		font-size: 24px;
+	}
+}
 
 	.jobDesc {
 		display: none;

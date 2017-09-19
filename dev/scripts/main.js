@@ -32,10 +32,6 @@ google.maps.event.addDomListener(window, 'load', () => {
 
 // set up formInputs object
 const formInputs = {};
-// let places;
-// let place;
-// let addressComponentArrayLength;
-
 
 // Init Function
 indeedApp.init = () => {
@@ -53,9 +49,17 @@ indeedApp.events = function() {
 		formInputs.query = $(this).find('.jobTitle').val();
 		formInputs.location = $(this).find('#jobLocation').val();
 		formInputs.type = $(this).find('.jobType').val();
+		console.log(formInputs.type);
+		console.log(formInputs.location);
+		console.log(formInputs.query);
 
+
+		if (formInputs.query === '') {
+			swal("Uh Oh!", "Please enter a valid Dream Job", "warning");
+		} else if (formInputs.location === '') {
+			swal("Uh Oh!", "Please enter a valid Location", "warning");
+		} else {
 		indeedApp.getJobs(); // Make AJAX call on Submit
-
 
 		$('.cardsContainer').empty();
 
@@ -67,6 +71,7 @@ indeedApp.events = function() {
 		$('html,body').animate({
 			scrollTop: $(".cardsContainer").offset().top - 100},'slow'
 		);
+	}
 	});
 
 	// Expand boxes on Click
@@ -74,29 +79,8 @@ indeedApp.events = function() {
 		const expand = $(this).find('.jobDesc');
 		expand.slideToggle(500);
 	});
-
-
-
-$(window).scroll(function () {
-    var top_offset = $(window).scrollTop();
-    if (top_offset <= 600) {
-        $('.userInputs__nav').css('display', 'none');
-} else {
-	$('.userInputs__nav').css('display', 'block');
-}
-
-});
-
 };
 
-
-
-// $('.userInputs__nav').on()
-
-// $(window).on('scroll', function() {
-// 	if ($(this).scrollTop() < $(window).height() ) {
-// 	            $nav.removeClass
-// })
 // Ajax Call
 indeedApp.getJobs = function() {
 		$.ajax({
@@ -132,7 +116,6 @@ indeedApp.getJobs = function() {
 			// console.log(jobsTotalResults);
 			indeedApp.displayJobs(jobsDataArray, jobsTotalResults);
 		} else if (res.totalResults <= 480) {
-			// for (i = 1; i <= Math.floor(res.totalResults / 24); i++) {
 			for (i = 1; i <= Math.floor(res.totalResults / 24); i++) {
 				$.ajax({
 				url: 'https://proxy.hackeryou.com',
@@ -156,8 +139,6 @@ indeedApp.getJobs = function() {
 				},
 			})
 			.then (function(res) {
-				// console.log(res);
-				// console.log(res.results);
 				jobsDataArray = res.results;
 				indeedApp.displayJobs(jobsDataArray)
 			})
@@ -186,8 +167,6 @@ indeedApp.getJobs = function() {
 				},
 			})
 			.then (function(res) {
-				// console.log(res);
-				// console.log(res.results);
 				jobsDataArray = res.results;
 				indeedApp.displayJobs(jobsDataArray)
 			})
@@ -205,7 +184,7 @@ indeedApp.displayJobs = function(jobs, results) {
 
 	jobs.forEach(function(job, i) {
 		let jobTitle = `<h3>${job.jobtitle}</h3>`;
-		let jobComp = `<h4>${job.company}</h4>`;
+		let jobComp = `<div class="jobTitle__container"><h4>${job.company}</h4><i class="fa fa-plus" aria-hidden="true"></i></div>`;
 		let jobDesc = `<p class="jobDesc">${job.snippet}</p>`
 		let jobUrl = `<a href=${job.url} target="_blank">Full Job Posting</a>`;
 		let jobCard = `<div class="jobCard-container animated">${jobTitle}${jobComp}${jobDesc}${jobUrl}`;
