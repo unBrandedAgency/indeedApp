@@ -236,6 +236,7 @@ input.jobTitle, .jobType, #jobLocation, #jobLocation__nav {
   border-bottom: 2px dotted #fff;
   font-size: 46px;
   font-weight: 800;
+  text-overflow: ellipsis;
   text-transform: uppercase;
   color: #fff;
   text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }

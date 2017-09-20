@@ -16,5 +16,8 @@
     "gulp-babel": "^7.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "fitty": "^2.2.5"
   }
 }

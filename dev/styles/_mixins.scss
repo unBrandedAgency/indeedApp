@@ -1,32 +1,26 @@
 @mixin headerText ($font-size: 5rem) {
-  font-family: $headerFont;
-  // color: #FFF;
-  font-size: $font-size;
+	font-family: $headerFont;
+	font-size: $font-size;
 }
-
-
 
 @mixin bodyText ($font-size: 1.2rem) {
-  font-family: $bodyFont;
-  font-weight: $light;
-  font-size: $font-size;
+	font-family: $bodyFont;
+	font-weight: $light;
+	font-size: $font-size;
 }
-
-// PUt in media queries here
 
 @mixin breakpoint($breakpoint) {
 
-  @if $breakpoint == "phone" {
-    @media (max-width: 670px) {
-      @content;
-    }
-  }
+	@if $breakpoint == "phone" {
+		@media (max-width: 670px) {
+			@content;
+		}
+	}
 
-
-  @else if $breakpoint == "tablet" {
-    @media (max-width: 880px) {
-      @content;
-    }
-  }
+	@else if $breakpoint == "tablet" {
+		@media (max-width: 880px) {
+			@content;
+		}
+	}
 
 }
