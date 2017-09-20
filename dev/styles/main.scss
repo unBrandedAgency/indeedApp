@@ -132,6 +132,15 @@ input.jobTitle, .jobType, #jobLocation, #jobLocation__nav {
 
 button.userSubmit {
 	box-shadow: 0px 2px 4px rgba(0,0,0,0.30);
+	transition: all 0.3s;
+	&:hover {
+		transition: all 0.3s;
+		box-shadow: 4px 4px rgba(0,0,0,0.6);
+	}
+	&:hover i.fa {
+		transition: all 0.3s;
+		color: white;
+	}
 	@include breakpoint(phone) {
 		display: none;
 	}

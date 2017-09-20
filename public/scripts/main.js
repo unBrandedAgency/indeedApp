@@ -96,7 +96,6 @@ indeedApp.getJobs = function () {
 				l: formInputs.location,
 				radius: 25,
 				jt: formInputs.type,
-				// start: i === 0 ? 0 : i * 24 + 1,
 				start: 0,
 				limit: 24,
 				hightlight: 1,
@@ -104,14 +103,11 @@ indeedApp.getJobs = function () {
 			}
 		}
 	}).then(function (res) {
-		// console.log(res);
-		// console.log(res.results);
 
 		// calculate how many ajax calls in the for loop
 		if (res.totalResults <= 24) {
 			var _jobsDataArray = res.results;
 			var jobsTotalResults = res.totalResults;
-			// console.log(jobsTotalResults);
 			indeedApp.displayJobs(_jobsDataArray, jobsTotalResults);
 		} else if (res.totalResults <= 480) {
 			for (i = 1; i <= Math.floor(res.totalResults / 24); i++) {
@@ -184,7 +180,6 @@ indeedApp.displayJobs = function (jobs, results) {
 		var jobDesc = '<p class="jobDesc">' + job.snippet + '</p>';
 		var jobUrl = '<a href=' + job.url + ' target="_blank">Full Job Posting</a>';
 		var jobCard = '<div class="jobCard-container animated">' + jobTitle + jobComp + jobDesc + jobUrl;
-		// console.log(jobCard);
 		// Print Cards
 		if (i % 2 === 0) {
 			$('.containerLeft').append(jobCard);

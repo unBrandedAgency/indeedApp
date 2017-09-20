@@ -248,7 +248,14 @@ input.jobTitle, .jobType, #jobLocation, #jobLocation__nav {
       font-size: 20px; } }
 
 button.userSubmit {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s; }
+  button.userSubmit:hover {
+    transition: all 0.3s;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.6); }
+  button.userSubmit:hover i.fa {
+    transition: all 0.3s;
+    color: white; }
   @media (max-width: 670px) {
     button.userSubmit {
       display: none; } }
