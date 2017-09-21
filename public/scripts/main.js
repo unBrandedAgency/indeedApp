@@ -101,7 +101,7 @@ indeedApp.getJobs = function () {
 
 		// Scroll to top of results
 		$('html,body').animate({
-			scrollTop: $(".cardsContainer").offset().top - 100 }, 'slow');
+			scrollTop: $(".cardsContainer").offset().top - 105 }, 'slow');
 
 		// calculate how many ajax calls in the for loop
 		if (res.totalResults <= 24) {
