@@ -367,8 +367,8 @@ button.hidden1 {
   float: left;
   transition: all 0.5s ease-in-out; }
   .jobCard-container:hover {
-    transform: translateY(-2px);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); }
+    box-shadow: 4px 4px 2px #007888;
+    border-top: 10px solid #009daf; }
   .jobCard-container i {
     color: #6e6e6e; }
   .jobCard-container h3 {
@@ -396,7 +396,11 @@ button.hidden1 {
   .jobCard-container .jobTitle__container {
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    transition: all 0.3s; }
+    .jobCard-container .jobTitle__container:hover i {
+      color: #00bcd4;
+      transition: all 0.3s; }
     .jobCard-container .jobTitle__container i {
       font-size: 24px; }
   .jobCard-container .jobDesc {
