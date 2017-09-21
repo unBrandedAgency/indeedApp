@@ -63,14 +63,7 @@ indeedApp.events = function() {
 
 		$('.cardsContainer').empty();
 
-		// add stickiness + animation to nav header
-		$('.nav').addClass('sticky animated slideInDown');
-		$('.userInputs__nav').css('display', 'block');
-		
-		// Scroll to top of results
-		$('html,body').animate({
-			scrollTop: $(".cardsContainer").offset().top - 100},'slow'
-		);
+
 	}
 	});
 
@@ -105,7 +98,15 @@ indeedApp.getJobs = function() {
 		},
 	})
 	.then(function(res) {
+		// add stickiness + animation to nav header
+		$('.nav').addClass('sticky animated slideInDown');
+		$('.userInputs__nav').css('display', 'block');
 		
+		// Scroll to top of results
+		$('html,body').animate({
+			scrollTop: $(".cardsContainer").offset().top - 105},'slow'
+		);
+
 		// calculate how many ajax calls in the for loop
 		if (res.totalResults <= 24) {
 			let jobsDataArray = res.results;

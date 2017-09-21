@@ -212,7 +212,7 @@ h5 {
 	background: $primaryGreen;
 	color: #FFF;
 	font-weight: 300;
-	padding: 0px 0px 20px 0px;
+	padding: 20px 0px 20px 0px;
 	border-bottom: 1px solid $accentYellow;
 	& > * {
 		display: inline-block;
@@ -276,7 +276,6 @@ button.hidden1 {
 		color: $lightGrey;
 	}
 	h3 {
-		
 		color: $accentBlue;
 		font-size: 20px;
 		font-weight: 400px;
