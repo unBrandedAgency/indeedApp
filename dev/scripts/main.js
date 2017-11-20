@@ -42,17 +42,13 @@ indeedApp.init = () => {
 indeedApp.events = function() {
 
 	// on submit of Form element
-	$('.userInputs').on('submit', function(e) { 
+	$('.userInputs').on('submit', function(e) {
 		e.preventDefault();
 		
 		// Grab Input Value and put in formInputs Object
 		formInputs.query = $(this).find('.jobTitle').val();
 		formInputs.location = $(this).find('#jobLocation').val();
 		formInputs.type = $(this).find('.jobType').val();
-		console.log(formInputs.type);
-		console.log(formInputs.location);
-		console.log(formInputs.query);
-
 
 		if (formInputs.query === '') {
 			swal("Uh Oh!", "Please enter a valid Dream Job", "warning");
@@ -62,8 +58,6 @@ indeedApp.events = function() {
 		indeedApp.getJobs(); // Make AJAX call on Submit
 
 		$('.cardsContainer').empty();
-
-
 	}
 	});
 

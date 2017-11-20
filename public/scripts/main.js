@@ -141,6 +141,7 @@ indeedApp.getJobs = function () {
 					url: 'https://proxy.hackeryou.com',
 					dataType: 'json',
 					method: 'GET',
+					accept: 'application/vnd.github.mercy-preview+json'
 					data: {
 						reqUrl: indeedApp.endpoint,
 						params: {
